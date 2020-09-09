@@ -1,0 +1,8 @@
+.col-md-4.pt-3 {
+    margin-top: 10%;
+    background: white;
+    border: 1px solid;
+    padding: 21px;
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .5);
+}

@@ -1,0 +1,79 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <h1>
+      User Tables
+      <small>User tables</small>
+    </h1>
+    <ol class="breadcrumb">
+      <li><a routerLink="#"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li><a routerLink="#">User</a></li>
+      <li class="active">User tables</li>
+    </ol>
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="box">
+          <div class="box-header">
+<h3 class="box-title">User Data </h3>
+&nbsp;&nbsp;&nbsp; <a routerLink="/adduser"><button class="btn btn-success text-right">Add User</button></a>
+          </div>
+         
+
+          <div class="box-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">First Name</th>
+                  <th scope="col">Last Name</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Mobile</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Degination</th>
+                
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = "let item of userdata,let i = index">
+                  <th scope="row"> {{i+1}}</th>
+                 
+                  <td>{{item.fristname}}</td>
+                  <td>{{item.lastname}}</td>
+                  <td>{{item.email}}</td>
+                  <td>{{item.mobile}}</td>
+                  <td>{{item.address}}</td>
+                  <td>{{item.degination}}</td>
+                  
+                 
+              <td>
+                <button type="button" class="btn btn-danger btn-sm ml-1" (click)="deletedata(item._id)">Delete</button>
+                <a [routerLink]="['/updateuser/', item._id]" class="btn btn-info btn-sm">Edit</a>
+
+                </td>
+                </tr>
+                
+                <ng-container *ngIf="userdata?.length==0"
+                >
+                  <tr>
+                    <td colspan="6">No data Found</td>
+                  </tr>
+                </ng-container>
+              </tbody>
+            </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </div>
+      <!-- /.col -->
+    </div>
+    <!-- /.row -->
+  </section>
+  <!-- /.content -->
+</div>

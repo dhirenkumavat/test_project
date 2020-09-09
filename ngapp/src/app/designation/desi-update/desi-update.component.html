@@ -1,0 +1,62 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+<h1>
+Designation  Form 
+
+</h1>
+<ol class="breadcrumb">
+<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+<li><a href="#">Designation  ADD Form </a></li>
+</ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+<div class="row">
+<!-- left column -->
+<div class="col-md-1"></div>
+<div class="col-md-10">
+<!-- general form elements -->
+<div class="box box-primary">
+<div class="box-header with-border">
+<h3 class="box-title">Designation  Add Form</h3>
+</div>
+<div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+<!-- /.box-header -->
+<!-- form start -->
+<form role="form" [formGroup]="empForm" (ngSubmit)="onupdatedesi()">
+<div class="box-body">
+
+    <div class="col-md-4 form-group">
+    <label for="exampleInputEmail1">Designation Name</label>
+    <input type="text" class="form-control" formControlName="deginationname" >
+    
+  </div>
+
+
+
+<div class="box-footer">
+<div class="col-md-2">
+<button [disabled]="loading" class="btn btn-primary">
+<span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+Update
+</button>
+</div>
+<div class="col-md-2">
+<!-- <button class="btn btn-primary" type="reset" (click)="onReset()">Cancel</button> -->
+</div>   
+</div>
+</div>
+</form>
+</div>
+<!-- /.box -->
+</div> 
+
+<div class="col-md-1"></div>
+</div>
+<!-- /.row -->
+</section>
+<!-- /.content -->
+</div>

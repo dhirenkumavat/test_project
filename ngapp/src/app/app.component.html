@@ -1,0 +1,16 @@
+<!-- nav -->
+<div *ngIf="currentUser">
+    <!-- <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div> -->
+    <app-header></app-header>
+    <app-sidebar></app-sidebar>
+    
+</div>
+
+<!-- main app container -->
+
+    <router-outlet></router-outlet>
+
+<!-- <app-footer></app-footer> -->
